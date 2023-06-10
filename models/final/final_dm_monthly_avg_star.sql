@@ -7,7 +7,7 @@ select
     extract(month from r.date) as month,
 from {{ref("int_yelp_review")}} as r
 join
-    {{ref("int_yelp_business")}} as b
+    {{ref("final_wh_dim_business")}} as b
     on r.business_id = b.business_id
 group by b.business_id, b.name, month
 order by b.business_id, b.name, month, avg(r.stars) desc
