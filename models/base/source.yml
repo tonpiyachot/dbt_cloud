@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: madt7102_bronze
+    description: 'Bronze layer for yelp_business table'
+    database: madt7102-385514
+    schema: madt7102_bronze
+    tables:
+      - name: yelp_business
+      - name: yelp_review
+      - name: master_state_us
